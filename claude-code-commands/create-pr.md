@@ -27,3 +27,18 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 ```
 
 For the pull request body, include a proper summary and the same attribution.
+
+## git commit-prefixes:
+
+- feat: "Adding new features or modifying functionality"
+- fix: "Bug fixes or typo corrections"
+- docs: "Adding documentation"
+- style: "Formatting changes, import order adjustments, or adding comments"
+- refactor: "Code refactoring without affecting functionality"
+- test: "Adding or modifying tests"
+- build: "Changes affecting build system or dependencies"
+- ci: "Changes related to CI/CD"
+- perf: "Performance improvements"
+- security: "Security-related changes"
+- docker: "Modifications to Dockerfile or container-related changes"
+- chore: "Miscellaneous changes"
