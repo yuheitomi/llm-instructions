@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  install-cc-commands:
+    desc: "Copy Claude Code commands to ~/.claude/commands"
+    cmds:
+      - mkdir -p ~/.claude/commands
+      - cp -f claude-code-commands/* ~/.claude/commands/
+    silent: false
