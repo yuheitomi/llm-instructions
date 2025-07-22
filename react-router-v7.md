@@ -50,19 +50,40 @@ import type { Route } from "./+types/category";
 ### Route Configuration (`app/routes.ts`)
 
 ```tsx
-import { type RouteConfig, index, route } from "@react-router/dev/routes";
+import { type RouteConfig, index, route, layout, prefix } from "@react-router/dev/routes";
 
 export default [
   index("routes/home.tsx"),
   route("about", "routes/about.tsx"),
+  
+  // Basic nested routes
   route("products/:id", "routes/product.tsx", [
     index("routes/product-overview.tsx"),
     route("reviews", "routes/product-reviews.tsx"),
   ]),
+  
+  // Layout routes (no URL segment)
+  layout("routes/auth-layout.tsx", [
+    route("login", "routes/login.tsx"),
+    route("register", "routes/register.tsx"),
+  ]),
+  
+  // Prefix grouping - all routes under /dashboard
+  ...prefix("dashboard", [
+    index("routes/dashboard-home.tsx"),
+    route("settings", "routes/dashboard-settings.tsx"),
+  ]),
+  
+  // Categories with dynamic params
   route("categories", "routes/categories-layout.tsx", [
     index("routes/categories-list.tsx"),
     route(":slug", "routes/category-details.tsx"),
   ]),
+  
+  // Catch-all/splat routes for dynamic content
+  route("docs/*", "routes/docs-catchall.tsx"), // Matches /docs/anything/here
+  route("files/:type/*", "routes/file-viewer.tsx"), // Matches /files/images/path/to/file
+  route("*", "routes/404.tsx"), // Catch-all for 404 pages - must be last
 ] satisfies RouteConfig;
 ```
 
@@ -438,6 +459,20 @@ const handleSubmit = (e) => {
 4. **LET TypeScript infer** loader/action return types - don't over-type returns
 5. **USE Route.ComponentProps** for your route components - automatic loaderData typing
 6. **ADD** `.react-router/types/**/*` to your `tsconfig.json` include array
+
+## Recommended Guidelines
+
+### Form Handling
+- **Use `<Form>` when appropriate** - React Router's `<Form>` component provides progressive enhancement and automatic form submission handling
+- Prefer `<Form>` over native `<form>` for actions that modify data or navigate
+
+### File Naming Convention
+- **Prefer `route.tsx` or `route.ts` for route file names unless ambiguous**
+- Use descriptive names only when the generic `route.tsx` would be unclear
+- Examples:
+  - ✅ `routes/products/route.tsx` instead of `routes/products/products.tsx`
+  - ✅ `routes/auth/login/route.tsx` instead of `routes/auth/login/login.tsx` 
+  - ✅ Use specific names like `user-profile.tsx` when `route.tsx` would be ambiguous in context
 
 ## AI Assistant Guidelines
 
