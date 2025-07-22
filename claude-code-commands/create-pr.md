@@ -18,7 +18,6 @@ Please help me commit my changes and create a pull request. Here's what I need y
    - A descriptive title
    - Summary of changes
    - List of commits included
-   - Basic test plan checklist
 
 Make sure each commit message ends with:
 
