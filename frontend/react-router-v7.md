@@ -79,7 +79,7 @@ export default [
   ]),
   
   // Catch-all/splat routes for dynamic content
-  route("docs/*", "routes/docs-catchall.tsx"), // Matches /docs/anything/here
+  route("docs/*", "routes/docs-catch-all.tsx"), // Matches /docs/anything/here
   route("files/:type/*", "routes/file-viewer.tsx"), // Matches /files/images/path/to/file
   route("*", "routes/404.tsx"), // Catch-all for 404 pages - must be last
 ] satisfies RouteConfig;
@@ -318,9 +318,17 @@ export default [
 ### File Naming Best Practices:
 
 - Use **descriptive names** that clearly indicate purpose
-- Use **kebab-case** for consistency (`product-details.tsx`)
+- **ALWAYS use kebab-case** for consistency (`product-details.tsx`, `user-profile.tsx`, `docs-catch-all.tsx`)
+- **NEVER use camelCase or PascalCase** for file names (`productDetails.tsx` ❌, `ProductDetails.tsx` ❌)
+- **Prefer `route.tsx` or `route.ts` for route file names unless ambiguous**
+- Use descriptive names only when the generic `route.tsx` would be unclear
 - Organize by **feature** rather than file naming conventions
 - The **route configuration** is the source of truth, not file names
+
+#### Examples:
+- ✅ `routes/products/route.tsx` instead of `routes/products/products.tsx`
+- ✅ `routes/auth/login/route.tsx` instead of `routes/auth/login/login.tsx` 
+- ✅ Use specific names like `user-profile.tsx` when `route.tsx` would be ambiguous in context
 
 ## Error Handling & Boundaries
 
@@ -412,12 +420,5 @@ const handleSubmit = (e) => {
 - **Use `<Form>` when appropriate** - React Router's `<Form>` component provides progressive enhancement and automatic form submission handling
 - Prefer `<Form>` over native `<form>` for actions that modify data or navigate
 
-### File Naming Convention
-- **Prefer `route.tsx` or `route.ts` for route file names unless ambiguous**
-- Use descriptive names only when the generic `route.tsx` would be unclear
-- Examples:
-  - ✅ `routes/products/route.tsx` instead of `routes/products/products.tsx`
-  - ✅ `routes/auth/login/route.tsx` instead of `routes/auth/login/login.tsx` 
-  - ✅ Use specific names like `user-profile.tsx` when `route.tsx` would be ambiguous in context
 
 ## AI Assistant Guidelines
