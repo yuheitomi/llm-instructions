@@ -12,7 +12,8 @@ Please help me commit my changes. Here's what I need you to do:
    - Feature areas (by directory/module)
    - Purpose of changes
 3. Create separate commits for each logical group with appropriate commit messages following conventional commit format
-4. If '$ARGUMENTS' is provided, use it as the commit message for a single commit instead of creating multiple logical commits
+4. Run typecheck or lint commands (if available in package.json) before committing to ensure code quality
+5. If '$ARGUMENTS' is provided, use it as the commit message for a single commit instead of creating multiple logical commits
 
 Make sure each commit message ends with:
 

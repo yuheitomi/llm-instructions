@@ -12,8 +12,9 @@ Please help me commit my changes and create a pull request. Here's what I need y
    - Feature areas (by directory/module)
    - Purpose of changes
 3. Create separate commits for each logical group with appropriate commit messages following conventional commit format
-4. Push the changes to the remote repository
-5. Create a pull request to the target branch (use '$ARGUMENTS' if provided, otherwise default to 'dev')
+4. Run typecheck or lint commands (if available in package.json) before committing to ensure code quality
+5. Push the changes to the remote repository
+6. Create a pull request to the target branch (use '$ARGUMENTS' if provided, otherwise default to 'dev')
 6. The PR should include:
    - A descriptive title
    - Summary of changes
