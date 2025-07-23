@@ -1,5 +1,6 @@
 ---
 description: "Setup Prettier for consistent code formatting"
+allowed-tools: Edit(*), Write(*), Bash(pnpm:*), Bash(bun:*), Bash(mkdir:*), LS(*)
 ---
 
 # Instructions
