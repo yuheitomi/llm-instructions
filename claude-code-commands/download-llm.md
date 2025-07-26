@@ -24,13 +24,14 @@ When matching keywords, consider these common patterns:
 - "react" → React Router documentation
 - "next" or "nextjs" → Next.js documentation
 - "daisy" or "daisyui" → daisyUI documentation
+- "svelte" → Svelte 5 documentation
 - "router" → React Router documentation
 - "advanced" → Advanced React Router documentation
 
 ## Download Process:
 
 1. Create ./docs directory if it doesn't exist using `mkdir -p ./docs`
-2. Download raw markdown files using `curl` or `wget` from: `https://raw.githubusercontent.com/yuheitomi/llm-instructions/refs/heads/main/[file-path]`
+2. Download raw markdown files using `curl` or `wget` from: `https://raw.githubusercontent.com/yuheitomi/llm-instructions/refs/heads/main/frameworks/[file-name]`
 3. Prefer `curl -o filename.md URL` or `wget -O filename.md URL` for downloads
 4. Save files with descriptive names that include the framework/topic
 5. Confirm successful download with file size and location
@@ -42,8 +43,9 @@ When matching keywords, consider these common patterns:
 curl -s https://raw.githubusercontent.com/yuheitomi/llm-instructions/refs/heads/main/index.md
 
 # Download specific documents
-curl -o ./docs/react-router-v7.md https://raw.githubusercontent.com/yuheitomi/llm-instructions/refs/heads/main/frontend/react-router-v7.md
-wget -O ./docs/nextjs-v15.md https://raw.githubusercontent.com/yuheitomi/llm-instructions/refs/heads/main/frontend/nextjs-v15.md
+curl -o ./docs/react-router-v7.md https://raw.githubusercontent.com/yuheitomi/llm-instructions/refs/heads/main/frameworks/react-router-v7.md
+wget -O ./docs/nextjs-v15.md https://raw.githubusercontent.com/yuheitomi/llm-instructions/refs/heads/main/frameworks/nextjs-v15.md
+curl -o ./docs/svelte5.md https://raw.githubusercontent.com/yuheitomi/llm-instructions/refs/heads/main/frameworks/svelte5.md
 ```
 
 ## Error Handling:
