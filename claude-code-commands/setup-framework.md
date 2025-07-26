@@ -23,8 +23,10 @@ Please help me setup a framework development environment using the configuration
 When matching keywords, consider these common patterns:
 
 - "prettier" → Prettier setup configuration
+- "eslint" → ESLint setup configuration
 - "svelte" or "svelte5" → Svelte 5 development environment setup
 - "format" or "formatting" → Prettier setup configuration
+- "lint" or "linting" → ESLint setup configuration
 
 ## Setup Process:
 
@@ -43,6 +45,7 @@ curl -s https://raw.githubusercontent.com/yuheitomi/llm-instructions/refs/heads/
 
 # Download specific setup guides
 curl -o ./temp/setup-prettier.md https://raw.githubusercontent.com/yuheitomi/llm-instructions/refs/heads/main/setup/setup-prettier.md
+curl -o ./temp/setup-eslint.md https://raw.githubusercontent.com/yuheitomi/llm-instructions/refs/heads/main/setup/setup-eslint.md
 curl -o ./temp/setup-svelte5.md https://raw.githubusercontent.com/yuheitomi/llm-instructions/refs/heads/main/setup/setup-svelte5.md
 ```
 
