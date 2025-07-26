@@ -5,7 +5,40 @@ allowed-tools: Edit(*), Write(*), Bash(pnpm:*), Bash(bun:*), Bash(mkdir:*), LS(*
 
 # Instructions
 
-Read this document as guidance and customize the configuration appropriately for the specific project being worked on. Detect the project structure, framework, and existing setup before applying these instructions.
+Read this document as guidance and customize the configuration appropriately for the specific project being worked on. **Always plan and propose changes before implementing them.**
+
+## Planning Phase
+
+Before making any changes, follow these steps:
+
+1. **Assess Current State**
+   - Check if Prettier is already installed: `ls package.json` and look for prettier dependencies
+   - Check for existing configuration: `ls .prettierrc .prettierrc.json .prettierrc.js prettier.config.js`
+   - Identify project structure and framework (React, Next.js, Svelte, etc.)
+   - Check package manager in use (npm, pnpm, bun)
+
+2. **Detect Project Requirements**
+   - Identify TypeScript usage: `ls tsconfig.json`
+   - Check for Tailwind CSS: look for tailwind in dependencies or `tailwind.config.js`
+   - Identify UI frameworks: check for React, Vue, Svelte in dependencies
+   - Check for existing formatting scripts in package.json
+   - Look for ESLint integration: check for eslint-config-prettier
+
+3. **Plan Configuration Strategy**
+   - Propose which Prettier configuration to use
+   - List dependencies that need to be installed (including plugins)
+   - Identify import order strategy based on framework
+   - Plan VS Code integration setup
+
+4. **Present Proposal**
+   - Show the user what will be installed
+   - Explain the configuration approach and import order strategy
+   - Ask for confirmation before proceeding
+   - Clarify any specific formatting preferences
+
+## Implementation Phase
+
+Only proceed with installation and configuration after the user approves the plan.
 
 If prettier is already configured, improve the existing configuration by using the provided instructions in this document. Ask for clarification if the proposed configuration does not match the existing setup or if there are any specific requirements that need to be addressed.
 
