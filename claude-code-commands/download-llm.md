@@ -40,7 +40,7 @@ When matching keywords, consider these common patterns:
 
 ```bash
 # Fetch index first
-curl -s https://raw.githubusercontent.com/yuheitomi/llm-instructions/refs/heads/main/index.md
+curl -s https://raw.githubusercontent.com/yuheitomi/llm-instructions/refs/heads/main/frameworks/index.md
 
 # Download specific documents
 curl -o ./docs/react-router-v7.md https://raw.githubusercontent.com/yuheitomi/llm-instructions/refs/heads/main/frameworks/react-router-v7.md
