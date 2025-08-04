@@ -12,3 +12,6 @@ Setup ESLint for code linting and quality enforcement. Covers framework-specific
 
 ### [setup-svelte5.md](setup-svelte5.md)
 Setup Svelte 5 development environment with Prettier and ESLint. Includes project initialization, tooling configuration, and development workflow setup.
+
+### [drrizle-turso.md](drrizle-turso.md)
+Setup Drizzle ORM with Turso database. Covers installation, configuration, schema definition, and environment-based database switching between local and remote databases.
