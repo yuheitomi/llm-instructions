@@ -7,13 +7,14 @@ allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git
 Please help me commit my changes. Here's what I need you to do:
 
 1. First, check the current git status to see what files have been modified
-2. Analyze the changes and group them into logical commits based on:
+2. Analyze the changes and group them into 2-3 logical commits based on:
    - File types (tests, docs, config, etc.)
    - Feature areas (by directory/module)
    - Purpose of changes
-3. Create separate commits for each logical group with appropriate commit messages following conventional commit format
-4. Run typecheck or lint commands (if available in package.json) before committing to ensure code quality
-5. If '$ARGUMENTS' is provided, use it as the target branch name (otherwise default to 'main')
+3. Present the proposed commit chunks to the user and ask for confirmation before proceeding
+4. Create separate commits for each logical group with appropriate commit messages following conventional commit format
+5. Run typecheck or lint commands (if available in package.json) before committing to ensure code quality
+6. If '$ARGUMENTS' is provided, use it as the target branch name (otherwise default to 'main')
 
 Make sure each commit message ends with:
 
