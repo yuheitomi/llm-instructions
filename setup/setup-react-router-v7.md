@@ -96,7 +96,7 @@ bun add -D @react-router/cloudflare
 
 ## Vite Configuration Enhancement
 
-Update or create `vite.config.ts` with React Router v7 optimizations and deployment adapters:
+Update `vite.config.ts` with `server.warmup` options by adding to the existing configuration:
 
 ```tsx
 import { reactRouter } from "@react-router/dev/vite";
@@ -106,50 +106,6 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
-  server: {
-    warmup: {
-      clientFiles: ["./app/**/!(*.server|*.test)*.tsx"],
-    },
-  },
-});
-```
-
-**For Vercel deployment, update to:**
-
-```tsx
-import { reactRouter } from "@react-router/dev/vite";
-import { vercelPreset } from "@react-router/vercel";
-import tailwindcss from "@tailwindcss/vite";
-import { defineConfig } from "vite";
-import tsconfigPaths from "vite-tsconfig-paths";
-
-export default defineConfig({
-  plugins: [
-    tailwindcss(),
-    reactRouter({
-      presets: [vercelPreset()],
-    }),
-    tsconfigPaths(),
-  ],
-  server: {
-    warmup: {
-      clientFiles: ["./app/**/!(*.server|*.test)*.tsx"],
-    },
-  },
-});
-```
-
-**For Cloudflare deployment, update to:**
-
-```tsx
-import { reactRouter } from "@react-router/dev/vite";
-import { cloudflareDevProxyVitePlugin } from "@react-router/dev/vite/cloudflare";
-import tailwindcss from "@tailwindcss/vite";
-import { defineConfig } from "vite";
-import tsconfigPaths from "vite-tsconfig-paths";
-
-export default defineConfig({
-  plugins: [cloudflareDevProxyVitePlugin(), tailwindcss(), reactRouter(), tsconfigPaths()],
   server: {
     warmup: {
       clientFiles: ["./app/**/!(*.server|*.test)*.tsx"],
@@ -291,9 +247,6 @@ import type { Route } from "./+types/home";
 
 - `react-router` - Main routing package
 - `@react-router/dev` - Development tools
-- `@react-router/node` - Node.js adapter
-- `@react-router/vercel` - Vercel adapter
-- `@react-router/cloudflare` - Cloudflare adapter
 
 **❌ NEVER use these legacy packages:**
 
