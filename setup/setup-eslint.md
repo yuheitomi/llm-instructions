@@ -1,8 +1,3 @@
----
-description: "Setup ESLint for code linting and quality enforcement"
-allowed-tools: Edit(*), Write(*), Bash(pnpm:*), Bash(npm:*), Bash(bun:*), Bash(mkdir:*), LS(*)
----
-
 # Instructions
 
 Read this document as guidance and customize the configuration appropriately for the specific project being worked on. **Always plan and propose changes before implementing them.**
@@ -12,18 +7,21 @@ Read this document as guidance and customize the configuration appropriately for
 Before making any changes, follow these steps:
 
 1. **Assess Current State**
+
    - Check if ESLint is already installed: `ls package.json` and look for eslint dependencies
    - Check for existing configuration: `ls eslint.config.js .eslintrc.*`
    - Identify project structure and framework (React, Next.js, Svelte, etc.)
    - Check package manager in use (npm, pnpm, bun)
 
 2. **Detect Project Requirements**
+
    - Identify TypeScript usage: `ls tsconfig.json`
    - Check for testing frameworks: look for jest, vitest, cypress in dependencies
    - Identify UI frameworks: check for React, Vue, Svelte in dependencies
    - Check for existing linting scripts in package.json
 
 3. **Plan Configuration Strategy**
+
    - Propose which ESLint configuration template to use
    - List dependencies that need to be installed
    - Identify any conflicts with existing setup

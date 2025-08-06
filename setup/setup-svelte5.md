@@ -1,8 +1,3 @@
----
-description: "Setup Svelte 5 development environment with Prettier and ESLint"
-allowed-tools: Edit(*), Write(*), Bash(pnpm:*), Bash(bun:*), Bash(mkdir:*), LS(*)
----
-
 # Instructions
 
 Read this document as guidance and customize the configuration appropriately for the specific project being worked on. **Always plan and propose changes before implementing them.**
@@ -12,6 +7,7 @@ Read this document as guidance and customize the configuration appropriately for
 Before making any changes, follow these steps:
 
 1. **Assess Current State**
+
    - Check if Svelte is already installed: `ls package.json` and look for svelte dependencies
    - Check Svelte version: look for svelte version in package.json
    - Check for existing configuration: `ls svelte.config.js vite.config.js`
@@ -19,6 +15,7 @@ Before making any changes, follow these steps:
    - Identify existing project structure
 
 2. **Detect Project Requirements**
+
    - Identify TypeScript usage: `ls tsconfig.json` or check for typescript in dependencies
    - Check for SvelteKit: look for @sveltejs/kit in dependencies
    - Check for existing build tools: Vite, Rollup, or Webpack
@@ -26,6 +23,7 @@ Before making any changes, follow these steps:
    - Look for existing linting/formatting: ESLint, Prettier configurations
 
 3. **Plan Configuration Strategy**
+
    - Propose Svelte 5 migration strategy if upgrading from Svelte 4
    - List dependencies that need to be installed or updated
    - Plan TypeScript integration approach
@@ -95,31 +93,27 @@ Check if ESLint is already configured (`.eslintrc.js`, `.eslintrc.json`, `eslint
 ```javascript
 module.exports = {
   root: true,
-  extends: [
-    'eslint:recommended',
-    '@typescript-eslint/recommended',
-    'plugin:svelte/recommended'
-  ],
-  parser: '@typescript-eslint/parser',
+  extends: ["eslint:recommended", "@typescript-eslint/recommended", "plugin:svelte/recommended"],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    sourceType: 'module',
+    sourceType: "module",
     ecmaVersion: 2020,
-    extraFileExtensions: ['.svelte']
+    extraFileExtensions: [".svelte"],
   },
   env: {
     browser: true,
     es2017: true,
-    node: true
+    node: true,
   },
   overrides: [
     {
-      files: ['*.svelte'],
-      parser: 'svelte-eslint-parser',
+      files: ["*.svelte"],
+      parser: "svelte-eslint-parser",
       parserOptions: {
-        parser: '@typescript-eslint/parser'
-      }
-    }
-  ]
+        parser: "@typescript-eslint/parser",
+      },
+    },
+  ],
 };
 ```
 
