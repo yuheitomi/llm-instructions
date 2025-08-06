@@ -13,5 +13,11 @@ Setup ESLint for code linting and quality enforcement. Covers framework-specific
 ### [setup-svelte5.md](setup-svelte5.md)
 Setup Svelte 5 development environment with Prettier and ESLint. Includes project initialization, tooling configuration, and development workflow setup.
 
+### [setup-react-router-v7.md](setup-react-router-v7.md)
+Setup React Router v7 Framework Mode for existing React applications with Vite, Prettier, and ESLint. Covers deployment platform detection, development tooling enhancement, and CLAUDE.md creation for best practices.
+
+### [setup-typescript-general.md](setup-typescript-general.md)
+General TypeScript development guidelines and best practices. Covers nullish coalescing operator usage and documentation organization for project-specific tasks.
+
 ### [drrizle-turso.md](drrizle-turso.md)
 Setup Drizzle ORM with Turso database. Covers installation, configuration, schema definition, and environment-based database switching between local and remote databases.
