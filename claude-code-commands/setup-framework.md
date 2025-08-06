@@ -1,7 +1,7 @@
 ---
 description: Setup framework development environment using configuration from setup directory
 argument-hint: "[framework]"
-allowed-tools: Edit(*), Write(*), Bash(pnpm:*), Bash(npm:*), Bash(bun:*), Bash(mkdir:*), LS(*), Read(*), WebFetch(*)
+allowed-tools: Read(*), Edit(*), Write(*), WebFetch(*), Bash(curl:*), Bash(wget:*), Bash(pnpm:*), Bash(npm:*), Bash(bun:*), Bash(mkdir:*), LS(*)
 ---
 
 Please help me setup a framework development environment using the configuration files from the setup directory. Here's what I need you to do:
