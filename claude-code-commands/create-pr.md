@@ -4,6 +4,8 @@ argument-hint: "[additional instructions for the PR]"
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git push:*), Bash(git log:*), Bash(git diff:*), Bash(git branch:*), Bash(git rev-parse:*), Bash(gh pr create:*), Bash(git ls-files:*)
 ---
 
+# Instruction
+
 Please help me commit my changes and create a pull request. Here's what I need you to do:
 
 1. Check '$ARGUMENTS' for any specific instructions regarding the pull request target branch or additional context.
@@ -15,7 +17,7 @@ Please help me commit my changes and create a pull request. Here's what I need y
 4. Create separate commits for each logical group with appropriate commit messages following conventional commit format
 5. Run typecheck or lint commands (if available in package.json) before committing to ensure code quality
 6. Push the changes to the remote repository
-7. Create a pull request to the target branch (check '$ARGUMENTS' if provided, otherwise default to 'dev')
+7. Create a pull request to the target branch (check '$ARGUMENTS' if provided, otherwise default to 'main')
 8. The PR should include:
    - A descriptive title
    - Summary of changes
@@ -23,9 +25,8 @@ Please help me commit my changes and create a pull request. Here's what I need y
 
 Make sure each commit message ends with:
 
-```
-🤖 Generated with Claude Code
-Co-Authored-By: Claude <noreply@anthropic.com>
+```text
+Generated with AI assistant
 ```
 
 For the pull request body, include a proper summary and the same attribution.
