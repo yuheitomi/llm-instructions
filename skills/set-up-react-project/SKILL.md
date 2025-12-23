@@ -2,8 +2,9 @@
 name: set-up-biome
 description: Set up configuratin files for the React project (Biome, Shadcn/UI)
 allowed-tools:
-  - Read
-  - Write
+  - Read(*)
+  - Write(*)
+  - WebFetch(*)
 ---
 
 # Instruction
@@ -23,10 +24,16 @@ Your task is to set up and complete configurations for the project to reflect th
 
 - Refer to the detail instruction: `shadcn-baseui.md`
 
-### Biome Configuration
+### Biome configuration
 
 - Refer biome settings of user preferences: `biome.jsonc`
 - Check the project's framework (e.g., Next.js, React Router, TanStack Router) to taior the Biome settings accordingly, especially for ignoring file patterns.
 - Use `.jsonc` format for Biome configuration.
 - If there's an existing Biome configuration (biome.json or biome.jsonc), ask the user how to merge the new settings with the existing ones.
 - Use appropriate Biome version schema based on the installed Biome in the project (if any) or install the latest Biome if not present.
+
+### pnpm configuration
+
+WARNING: Apply this only when the project uses `pnpm` as the package manager.
+
+- Refer to the detail instruction: `pnpm.md`
