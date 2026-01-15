@@ -1,5 +1,5 @@
 ---
-name: set-up-biome
+name: setup-react-app-config
 description: Set up configuratin files for the React project (Biome, Shadcn/UI)
 allowed-tools:
   - Read(*)
@@ -15,7 +15,10 @@ Your task is to set up and complete configurations for the project to reflect th
 
 - Analyze the project structure and installed libraries and existing configuration files to determine the best way to integrate them.
 - Check the existing configuration files and settings of the project to plan how to integrate configurations.
-- Ask the user which configuration options to apply based on your analysis.
+- Ask the user which configurations to apply based on your analysis.
+  - pnpm
+  - biome
+  - shadcn
 - When there's an existing configuration in the project (e.g., existing linter or formatter), ask the user how to handle potential conflicts or merges.
 
 ## Instruction details and template files:
