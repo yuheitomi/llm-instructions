@@ -2,6 +2,7 @@
 description: Commits changes in logical chunks and creates a PR
 argument-hint: "[additional instructions for the PR]"
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git push:*), Bash(git log:*), Bash(git diff:*), Bash(git branch:*), Bash(git rev-parse:*), Bash(gh pr create:*), Bash(git ls-files:*)
+disable-model-invocation: true
 ---
 
 # Instruction

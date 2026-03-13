@@ -2,6 +2,7 @@
 description: Commits changes in logical chunks with proper commit messages
 argument-hint: "[target-branch]"
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git log:*), Bash(git diff:*), Bash(git ls-files:*)
+disable-model-invocation: true
 ---
 
 Please help me commit my changes. Here's what I need you to do:

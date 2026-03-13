@@ -4,6 +4,7 @@ documentation-url: https://docs.github.com/en/issues/tracking-your-work-with-iss
 display-name: "Create GitHub Issue"
 argument-hint: "[issue-title]"
 allowed-tools: Bash(gh issue create:*), Bash(gh auth status:*), Bash(gh repo view:*), Read(*)
+disable-model-invocation: true
 ---
 
 ## Instruction
