@@ -1,4 +1,5 @@
 ---
+name: gh-issue
 description: Creates a new GitHub issue in the current repository
 documentation-url: https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue
 display-name: "Create GitHub Issue"

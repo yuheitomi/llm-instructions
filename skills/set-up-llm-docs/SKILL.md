@@ -1,4 +1,5 @@
 ---
+name: set-up-llm-docs
 description: Download LLM instruction documents from the repository
 argument-hint: "[keyword]"
 allowed-tools: WebFetch(*), Bash(curl:*), Bash(wget:*), Bash(mkdir:*), Write(*), LS(*)

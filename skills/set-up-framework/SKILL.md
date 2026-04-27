@@ -1,4 +1,5 @@
 ---
+name: set-up-framework
 description: Setup framework development environment using configuration from setup directory
 argument-hint: "[framework]"
 allowed-tools: Read(*), Edit(*), Write(*), WebFetch(*), Bash(curl:*), Bash(wget:*), Bash(pnpm:*), Bash(npm:*), Bash(bun:*), Bash(mkdir:*), LS(*)

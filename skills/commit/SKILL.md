@@ -1,4 +1,5 @@
 ---
+name: commit
 description: Commits changes in logical chunks with proper commit messages
 argument-hint: "[target-branch]"
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git log:*), Bash(git diff:*), Bash(git ls-files:*)
@@ -16,13 +17,6 @@ Please help me commit my changes. Here's what I need you to do:
 4. Create separate commits for each logical group with appropriate commit messages following conventional commit format
 5. Run typecheck or lint commands (if available in package.json) before committing to ensure code quality
 6. If '$ARGUMENTS' is provided, use it as the target branch name (otherwise default to 'main')
-
-Make sure each commit message ends with:
-
-```
-🤖 Generated with Claude Code
-Co-Authored-By: Claude <noreply@anthropic.com>
-```
 
 ## git commit-prefixes:
 
