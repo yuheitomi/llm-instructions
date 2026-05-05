@@ -1,6 +1,6 @@
 ---
 name: setup-react-app-config
-description: Set up configuratin files for the React project (Biome, Shadcn/UI)
+description: Set up configuration files for React projects (Vite-plus, Shadcn/UI)
 allowed-tools:
   - Read(*)
   - Write(*)
@@ -17,23 +17,21 @@ Your task is to set up and complete configurations for the project to reflect th
 - Check the existing configuration files and settings of the project to plan how to integrate configurations.
 - Ask the user which configurations to apply based on your analysis.
   - pnpm
-  - biome
+  - vite-plus (`vite.config.ts`)
   - shadcn
 - When there's an existing configuration in the project (e.g., existing linter or formatter), ask the user how to handle potential conflicts or merges.
 
-## Instruction details and template files:
+## Instruction details and template files
+
+### Vite-plus
+
+Use when setting up a **Vite-plus**-based environment (single `vite.config.ts` for build, lint, format, and tests).
+
+- Refer to: `vite-plus.md`
 
 ### Shadcn/UI with Base UI
 
 - Refer to the detail instruction: `shadcn-baseui.md`
-
-### Biome configuration
-
-- Refer biome settings of user preferences: `biome.jsonc`
-- Check the project's framework (e.g., Next.js, React Router, TanStack Router) to taior the Biome settings accordingly, especially for ignoring file patterns.
-- Use `.jsonc` format for Biome configuration.
-- If there's an existing Biome configuration (biome.json or biome.jsonc), ask the user how to merge the new settings with the existing ones.
-- Use appropriate Biome version schema based on the installed Biome in the project (if any) or install the latest Biome if not present.
 
 ### pnpm configuration
 
