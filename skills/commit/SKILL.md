@@ -9,14 +9,18 @@ disable-model-invocation: true
 Please help me commit my changes. Here's what I need you to do:
 
 1. First, check the current git status to see what files have been modified
-2. Analyze the changes and group them into 2-3 logical commits based on:
+2. Analyze the changes and group them into logical commits when necessary, based on:
    - File types (tests, docs, config, etc.)
    - Feature areas (by directory/module)
    - Purpose of changes
-3. Present the proposed commit chunks to the user and ask for confirmation before proceeding
-4. Create separate commits for each logical group with appropriate commit messages following conventional commit format
-5. Run typecheck or lint commands (if available in package.json) before committing to ensure code quality
-6. If '$ARGUMENTS' is provided, use it as the target branch name (otherwise default to 'main')
+3. If the commit chunks are clear and low-risk, proceed without asking the user to confirm the chunks
+4. Ask the user to confirm the proposed chunks before committing when:
+   - The changes include unrelated kinds of work
+   - The intended grouping is uncertain
+   - A change looks risky, surprising, or outside the expected scope
+5. Create separate commits for each logical group with appropriate commit messages following conventional commit format
+6. Run typecheck or lint commands (if available in package.json) before committing to ensure code quality
+7. If '$ARGUMENTS' is provided, use it as the target branch name (otherwise default to 'main')
 
 ## git commit-prefixes:
 
